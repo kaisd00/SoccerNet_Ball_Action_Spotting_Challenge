@@ -6,16 +6,16 @@ import time
 start_time = time.time()
 
 # 既に二値化されているロゴマスクを読み込む
-logo_mask = cv2.imread(r'C:\Users\kai\Desktop\Lab\summercamp\logo_mask_resize.png', cv2.IMREAD_GRAYSCALE)
+logo_mask = cv2.imread(r'', cv2.IMREAD_GRAYSCALE)
 
 # 動画ファイルを読み込む
-cap = cv2.VideoCapture(r'C:\Users\kai\Desktop\Lab\summercamp\output_video_20min.mp4')
+cap = cv2.VideoCapture(r'')
 fps = cap.get(cv2.CAP_PROP_FPS)
 frame_width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
 frame_height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
 
 # 出力用の動画ファイル
-out = cv2.VideoWriter(r'C:\Users\kai\Desktop\Lab\summercamp\output_video_replay_coach_detection.mp4', cv2.VideoWriter_fourcc(*'mp4v'), fps, (frame_width, frame_height))
+out = cv2.VideoWriter(r'', cv2.VideoWriter_fourcc(*'mp4v'), fps, (frame_width, frame_height))
 
 # 閾値とリプレイ判定後に無視するフレーム数
 threshold = 4000000  # 画素値の総和の閾値
